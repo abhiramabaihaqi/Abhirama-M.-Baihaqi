@@ -7,6 +7,6 @@ saldo -=20000;
 saldo +=15000;
 
 // Saldo x2
-saldo * 2;
+saldo *= 2;
 
 console.log("Saldo akhir: ", saldo)
