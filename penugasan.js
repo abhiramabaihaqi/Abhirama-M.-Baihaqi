@@ -1,10 +1,10 @@
 let saldo= 50000;
 
 // Andi menabung
-saldo -=20000;
+saldo +=20000;
 
 // Andi menarik saldo
-saldo +=15000;
+saldo -=15000;
 
 // Saldo x2
 saldo *= 2;
