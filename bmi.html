@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Hitungan BMI</title>
+    </head>    
+
+    <body>
+        <label>Masukkan Berat Badan (kg):</label>
+        <input type="number" id="inputBerat">
+        <br>
+        <label>Masukkan Tinggi Badan (m):</label>
+        <input type="number" id="inputTinggi">
+        <br>
+        <button onclick="cekNilai()">Cek Hasil</button>
+        <p id="outputHasil"></p>
+        <script>
+            function cekNilai(){
+            const tinggi=Number(document.getElementById('inputTinggi').value);
+            const berat=Number(document.getElementById('inputBerat').value);
+            let bmi = (berat/(tinggi*tinggi))
+            let hasil;
+            if (bmi >=30){
+                hasil = "Obesitas II"
+            } else if (bmi >=25){
+                hasil = "Obesitas I"
+            } else if (bmi >= 23){
+                hasil = "Overweight"
+            } else if (bmi >= 18.5){
+                hasil = "Normal"
+            } else if (bmi < 18.5){
+                hasil = "Underweight"
+            }
+            document.getElementById('outputHasil').textContent=hasil
+        }
+        </script>
+    </body>
+</html>
